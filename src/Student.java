@@ -3,9 +3,10 @@ public class Student {
     private final String name;
     private int score;
 
-    public Student(int id, String name){
+    public Student(int id, String name, int score){
         this.id = id;
         this.name = name;
+        this.score = score;
     }
 
 
@@ -28,7 +29,7 @@ public class Student {
         this.score = newscore;
     }
 
-    public String getPsssStatus(){
+    public String getPassStatus(){
         if (score>=60){
             return PassStatus.PASSED.getLabel();
         } else {
@@ -38,6 +39,6 @@ public class Student {
 
     @Override
     public String toString(){
-        return "id : " + id + " / 이름: " + name + " / 점수: " + score + " / " + getPsssStatus();
+        return "id : " + id + " / 이름: " + name + " / 점수: " + score + " / " + getPassStatus();
     }
 }

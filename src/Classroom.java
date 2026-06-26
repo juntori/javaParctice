@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class Classroom {
-    private final List<Student> studentList = new ArrayList<>();
+    private final List<Student> studentList;
 
     public Classroom(){
         this.studentList = new ArrayList<>();
@@ -25,7 +25,7 @@ public class Classroom {
 
     public List<Student> getPassedStudents(){
         return studentList.stream()
-                .filter(student -> student.getPsssStatus() == PassStatus.PASSED.getLabel()).toList();
+                .filter(student -> student.getPassStatus().equals(PassStatus.PASSED.getLabel())).toList();
 
     }
 
@@ -36,7 +36,7 @@ public class Classroom {
 
     public List<Student> searchByName(String keyWord){
         return studentList.stream()
-                .filter(student -> student.getName().equals(keyWorld)).toList();
+                .filter(student -> student.getName().contains(keyWord)).toList();
     }
 
 }
