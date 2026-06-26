@@ -30,7 +30,7 @@ public class Student {
     }
 
     public String getPassStatus(){
-        if (score>=60){
+        if (score>=70){
             return PassStatus.PASSED.getLabel();
         } else {
             return PassStatus.FAILED.getLabel();

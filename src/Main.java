@@ -21,6 +21,7 @@ public class Main {
         classroom.addStudent(new Student(1,"김하나", 87));
         classroom.addStudent(new Student(2, "이도윤", 92));
         classroom.addStudent(new Student(3, "박서준", 58));
+        classroom.addStudent(new Student(4, "정다은", 75));
 
 
         System.out.println("----------전체 학생 출력----------");
@@ -49,6 +50,11 @@ public class Main {
 
         System.out.println("----------최고점 학생 출력----------");
         System.out.println(classroom.findTopStudent());
+
+        System.out.println("----------이름으로 학생 검색----------");
+        System.out.println("찾을 학생의 이름을 입력하세요.");
+        String keyword = scanner.next();
+        System.out.println(classroom.searchByName(keyword));
 
 
 
